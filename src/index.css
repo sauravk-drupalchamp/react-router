@@ -21,3 +21,8 @@ nav a{
 nav{
   margin-bottom: 30px;
 }
+/* CSS FOR ACTIVE LINK */
+/* a.active{
+  text-decoration: none;
+  font-weight: bolder;
+} */
