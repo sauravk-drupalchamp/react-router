@@ -1,15 +1,16 @@
+import React from "react";
 import "./App.css";
-import { Homepage, About, Navbar,OrderConfirmation, NoMatch, Products, Featured, New, Users, UserDetails, Admin } from "./components";
+import { Homepage, Navbar,OrderConfirmation, NoMatch, Products, Featured, New, Users, UserDetails, Admin } from "./components";
 import { Route, Routes } from "react-router-dom";
-import { Fragment } from "react";
+const LazyAbout = React.lazy(()=> import('./components/About'));
 
 function App() {
   return (
-    <Fragment>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" exact element={<Homepage />} />
-        <Route path="about" exact element={<About />} />
+        <Route path="about" exact element={<React.Suspense fallback='Loading ...'><LazyAbout /></React.Suspense>} />
         <Route path="order-summary" element={<OrderConfirmation />}/>
         <Route path="products" element={<Products />} >
           <Route index element={<Featured />}/>
@@ -22,7 +23,7 @@ function App() {
         </Route>
         <Route path='*' element={<NoMatch />} />
       </Routes>
-    </Fragment>
+    </>
   );
 }
 
