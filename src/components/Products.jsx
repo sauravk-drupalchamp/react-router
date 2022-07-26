@@ -17,4 +17,4 @@ const Products = () => {
 }
 
 export default Products
-// DONOT USE / FOR RELATIVE PATH
+// DONOT USE / FOR RELATIVE PATH IF YOU USE / THEN IT WILL CONSIDER IT FROM HOME ROUTE
