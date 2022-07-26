@@ -1,5 +1,5 @@
 import "./App.css";
-import { Homepage, About, Navbar,OrderConfirmation, NoMatch, Products, Featured, New } from "./components";
+import { Homepage, About, Navbar,OrderConfirmation, NoMatch, Products, Featured, New, Users, UserDetails, Admin } from "./components";
 import { Route, Routes } from "react-router-dom";
 import { Fragment } from "react";
 
@@ -16,7 +16,10 @@ function App() {
           <Route path="featured" element={<Featured />}/>
           <Route path="new" element={<New />}/>
         </Route>
-        
+        <Route path="users" element={<Users />}> 
+        <Route path=":id" element={<UserDetails />}/>
+        <Route path="admin" element={<Admin />}/>
+        </Route>
         <Route path='*' element={<NoMatch />} />
       </Routes>
     </Fragment>

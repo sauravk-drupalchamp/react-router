@@ -6,3 +6,6 @@ export  {default as NoMatch } from '../components/NoMatch';
 export  {default as Products } from '../components/Products';
 export  {default as Featured } from '../components/Featured';
 export  {default as New } from '../components/New';
+export  {default as Users } from '../components/Users';
+export  {default as UserDetails } from '../components/UserDetails';
+export  {default as Admin } from '../components/Admin';
